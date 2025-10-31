@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+.container {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navList > li > a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #474747;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.navList > li > a:hover {
+  border-bottom: 2px solid #004b8b;
+  color: #004b8b;
+}
+
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #004b8b;
+  font-size: 14px;
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: 5px;
+  z-index: 100;
+}
+
+.lang-menu a {
+  display: block;
+  padding: 4px 6px;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.lang-menu a:hover {
+  opacity: 0.5;
+}
+
+/* JavaScript orqali ochilganda */
+.lang-menu.show {
+  display: block;
+}
+
+/* Burger Menu Styles */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+  padding: 10px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background-color: #004b8b;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(41deg) translateY(12px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-41deg) translateY(-11px);
+}
+
+/* Desktop Navigation */
+
+/* Mobile Styles */
+@media (max-width: 1024px) {
+  .burger {
+    display: flex;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -200%;
+    height: 100vh;
+    width: 300px;
+    background: #ffffff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-x: auto;
+  }
+
+  .mobile-nav.active {
+    left: 0;
+  }
+
+  .mobile-nav-content {
+    padding: 80px 30px 30px;
+  }
+
+  .mobile-nav .navList {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 30px;
+  }
+
+  .mobile-nav .navList > li {
+    width: 100%;
+  }
+
+  .mobile-nav .navList > li > a {
+    display: block;
+    padding: 15px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .mobile-nav .navList > li:last-child > a {
+    border-bottom: none;
+  }
+
+  .mobile-phone {
+    display: block;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #004b8b;
+    text-decoration: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .mobile-lang {
+    padding-top: 15px;
+  }
+
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #d8d9e2;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .overlay.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .mobile-nav {
+    width: 280px;
+  }
+}
+
+/* swiper uchun */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+}
+
+.swiper-pagination-bullet {
+  width: 30px;
+  height: 8px;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 1);
+  opacity: 0.4;
+  margin-right: 20px !important;
+  margin-bottom: 50px !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 60px;
+  background-color: white;
+  opacity: 1;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 4px;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 1);
+    opacity: 0.4;
+    margin-right: 10px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 30px;
+    background-color: white;
+    opacity: 1;
+  }
+}
+
+/* Orqa fon rasmi ustidan qatlam (overlay) */
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #022d52;
+  opacity: 50%; /* Asosiy #004B8B ning shaffof varianti */
+  z-index: 1; /* Matn va boshqa kontentdan pastda turishi kerak */
+}
+
+/* Kontentning overlay ustida turishi uchun z-index */
+.swiper-slide > div:last-child {
+  /* Asosiy kontent divi */
+  position: relative;
+  z-index: 2; /* Overlay ustida turishi uchun */
+}
+
+/* Orqa fon rasmi ustidan qatlam (overlay) */
+.uslug-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #004b8b;
+  opacity: 50%; /* Asosiy #004B8B ning shaffof varianti */
+  z-index: 1; /* Matn va boshqa kontentdan pastda turishi kerak */
+}
+
+/* Kontentning overlay ustida turishi uchun z-index */
+.uslug > div {
+  /* Asosiy kontent divi */
+  position: relative;
+  z-index: 2; /* Overlay ustida turishi uchun */
+}
+
+.linkHover:hover .linkHoverOpacity {
+  opacity: 80%;
+}
+
+.linkHover:hover .linkHoverInfo {
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .linkHover:hover .linkHoverInfo {
+    height: 30px;
+  }
+}
+
+.clip-hexagon {
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+.hoverShadow {
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.hoverShadow:hover {
+  box-shadow: 1px 8px 12px rgba(0, 0, 0, 0.12);
+}
+
+.slides2 {
+  width: 240px;
+  height: 160px;
+}
+
+@media (max-width: 640px) {
+  .slides2 {
+    width: 150px;
+    height: 120px;
+  }
+}
+
+.slides2::before {
+  display: none !important;
+}
+
+/* 1. PAGINATIONNING ASOSIY POZITSIYASINI BEKOR QILISH */
+.pag2 {
+  /* Swiperning standart absolute pozitsiyasini bekor qilish uchun kerak */
+  position: relative !important;
+
+  /* Standart pagination-top/bottom pozitsiyalarini bekor qilish */
+  bottom: auto !important;
+  top: auto !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+
+  /* Logotip balandligidan pastga surish uchun tashqi bo'shliq */
+  margin-top: 20px; /* Siz xohlagan piksel qiymatini bering */
+
+  /* Matnni markazga joylashtirish (agar .pag2 da display:flex bo'lmasa) */
+  text-align: center;
+}
+
+/* 2. Nuqtalarning Ko'rinishi (oldin berilgan) */
+.pag2 .swiper-pagination-bullet {
+  background: #e0e9f2;
+  transition: all 0.3s ease;
+  margin: 0 4px;
+}
+
+.pag2 .swiper-pagination-bullet-active {
+  background: #004b8b;
+}
