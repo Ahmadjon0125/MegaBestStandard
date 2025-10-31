@@ -76,48 +76,44 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-
-
 var swiper2 = new Swiper(".mySwiper2", {
-    // Asosiy sozlamalar
-    loop: true, 
-    speed: 600, 
-    
-    // Hamma ekranlarda 5 ta rasm ko'rinsin (sizning asosiy talabingiz)
-    slidesPerView: 2, 
-    
-    // MUHIM: Hamma ekranlarda pagination ko'rinishi uchun!
-    slidesPerGroup: 2, // Har bir slaydni alohida sahifa deb hisoblashga majbur qiladi.
-    
-    // loop: true to'g'ri ishlashi uchun zarur (rasmlar soniga teng)
-    loopedSlides: 5, 
+  // Asosiy sozlamalar
+  loop: true,
+  speed: 600,
 
-    spaceBetween: 30,
-    // centeredSlides: true, 
-    
-    pagination: {
-        el: ".pag2",
-        clickable: true, 
+  // Hamma ekranlarda 5 ta rasm ko'rinsin (sizning asosiy talabingiz)
+  slidesPerView: 2,
+
+  // MUHIM: Hamma ekranlarda pagination ko'rinishi uchun!
+  slidesPerGroup: 2, // Har bir slaydni alohida sahifa deb hisoblashga majbur qiladi.
+
+  // loop: true to'g'ri ishlashi uchun zarur (rasmlar soniga teng)
+  loopedSlides: 5,
+
+  spaceBetween: 30,
+  // centeredSlides: true,
+
+  pagination: {
+    el: ".pag2",
+    clickable: true,
+  },
+
+  // Kichik ekranlarda 3 ta ko'rinadigan qismni ham breakpointga qo'shamiz (ixtiyoriy)
+  breakpoints: {
+    // 768px dan kichik ekranlar uchun
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 1, // Kichik ekranda ham har bir slayd alohida hisoblansin
+      spaceBetween: 20,
     },
-    
-    // Kichik ekranlarda 3 ta ko'rinadigan qismni ham breakpointga qo'shamiz (ixtiyoriy)
-    breakpoints: {
-        // 768px dan kichik ekranlar uchun
-        768: {
-            slidesPerView: 3,
-            slidesPerGroup: 1, // Kichik ekranda ham har bir slayd alohida hisoblansin
-            spaceBetween: 20
-        },
-        // 1024px dan yuqori ekranlar uchun
-        1024: {
-            slidesPerView: 5,
-            slidesPerGroup: 1,
-            spaceBetween: 30
-        }
-    }
+    // 1024px dan yuqori ekranlar uchun
+    1024: {
+      slidesPerView: 5,
+      slidesPerGroup: 1,
+      spaceBetween: 30,
+    },
+  },
 });
-
-
 
 // -------------------   Agar paginatsiya chiziqlari faqat 3 tagina chiqsin deyilsa pastdagini ishlatamiz     -------------------
 
@@ -156,6 +152,12 @@ var swiper2 = new Swiper(".mySwiper2", {
 
 // ------------------------------||||||||||||||||||||||||||||||||----------------------
 
+// Fancybox
 
-
-   
+Fancybox.bind("[data-fancybox]", {
+  Carousel: {
+    Video: {
+      autoplay: false,
+    },
+  },
+});
