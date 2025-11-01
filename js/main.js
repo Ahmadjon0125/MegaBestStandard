@@ -161,3 +161,49 @@ Fancybox.bind("[data-fancybox]", {
     },
   },
 });
+
+
+
+const thumbs = new Swiper('.thumb-slider', {
+  spaceBetween: 16,
+  freeMode: true,
+  watchSlidesProgress: true,
+  grabCursor: true,
+  slidesPerView: 2,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 2, // juda kichik ekranlar
+      spaceBetween: 8,
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 12,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+    1280: {
+      slidesPerView: 6,
+      spaceBetween: 48,
+    },
+  },
+});
+
+
+  const main = new Swiper('.main-slider', {
+    spaceBetween: 10,
+    loop: false,
+    navigation: {
+      nextEl: '.next1',
+      prevEl: '.prev1',
+    },
+    thumbs: {
+      swiper: thumbs,
+    },
+  });

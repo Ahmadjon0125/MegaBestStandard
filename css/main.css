@@ -261,7 +261,7 @@ body {
 }
 
 /* Orqa fon rasmi ustidan qatlam (overlay) */
-.swiper-slide::before {
+.heroSlider::before {
   content: "";
   position: absolute;
   top: 0;
@@ -372,4 +372,107 @@ body {
   background: #004b8b;
 }
 
+/* serviceIn swiper */
 
+.main-slider {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto 20px;
+}
+.main-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thumb-slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.thumb-slider img {
+  width: 180px;
+  height: 118px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.swiper-box > div {
+  width: max-content !important;
+}
+
+
+.thumbSlider .swiper-slide {
+  position: relative;
+}
+
+.thumbSlider .swiper-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #004B8B;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.thumbSlider .swiper-slide-thumb-active::after {
+  opacity: 0.6;
+}
+
+.next1,
+.prev1 {
+  background-color: #004B8B;
+  padding: 18px 25px;
+  opacity: 80;
+  width: 60px;
+  height: 60px;
+}
+
+.next1 ::after,
+.prev1 ::after{
+  
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.next1 {
+  right: 0;
+}
+
+.prev1 {
+  left: 0;
+}
+
+.thumb-slider {
+  cursor: grab;
+  user-select: none;
+}
+
+@media (max-width:640px) {
+
+  .main-slider {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto 20px;
+}
+
+  .thumb-slider img {
+  width: 100px;
+  height: 60px;
+}
+
+.next1,
+.prev1 {
+  background-color: transparent;
+  padding: 18px 25px;
+  opacity: 80;
+  width: 30px;
+  height: 30px;
+}
+
+.next1::after,
+.prev1::after {
+  
+  font-size: 25px;
+}
+
+}
