@@ -497,3 +497,9 @@ body {
   top: 0%;
 }
 }
+
+
+.newsHoverIn:hover .newsTitle {
+color: #004B8B;
+
+}
