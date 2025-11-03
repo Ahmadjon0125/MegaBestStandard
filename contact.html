@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fancybox -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"
+    />
+
+    <!-- swiperjs -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- tailwindcss -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Mega Best Standard</title>
+  </head>
+  <body>
+    <header id="mainHeader" class="py-[14px] fixed w-full z-50">
+      <div class="container">
+        <div class="flex items-center">
+          <a href="/">
+            <img src="./img/logo.svg" class="w-[80px] lg:w-[125px]" alt="" />
+          </a>
+          <nav
+            class="flex items-center ml-[25px] md:ml-[40px] lg:ml-[60px] xl:ml-[80px] 2xl:ml-[124px] flex-grow"
+          >
+            <ul class="hidden lg:flex justify-between navList w-full">
+              <li><a href="/about.html">О компании </a></li>
+              <li><a href="/service.html">Услуги</a></li>
+              <li><a href="/product.html">Продукция </a></li>
+              <li><a href="/portfolio.html">Портфолио</a></li>
+              <li><a href="/news.html">Новости</a></li>
+              <li><a href="/contact.html">Контакты</a></li>
+            </ul>
+            <div
+              class="hidden lg:block lg:mx-[20px] xl:mx-[28px] 2xl:mx-[38px] px-1 sm:px-2 md:px-4 xl:px-6 2xl:px-10 border-x-[#004B8B] lg:border-x-1"
+            >
+              <a
+                class="text-[#474747] font-[600] whitespace-nowrap"
+                href="tel:+998935054505"
+                >+998 93 505 45 05</a
+              >
+            </div>
+            <div class="ml-auto lang-dropdown">
+              <button class="lang-btn" id="langBtn">
+                <div class="flex items-center text-[14px] lanBtnVal">
+                  <div id="lanBtnVal">RU</div>
+                  <img src="./img/arrowLang.svg" class="ml-[6px]" alt="" />
+                </div>
+              </button>
+              <div class="lang-menu" id="langMenu">
+                <a href="#">RU</a>
+                <a href="#">EN</a>
+                <a href="#">UZ</a>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Burger Button -->
+          <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-content">
+          <ul class="navList flex lg:hidden">
+            <li><a href="/about.html">О компании </a></li>
+            <li><a href="/service.html">Услуги</a></li>
+            <li><a href="/product.html">Продукция </a></li>
+            <li><a href="/portfolio.html">Портфолио</a></li>
+            <li><a href="/news.html">Новости</a></li>
+            <li><a href="/contact.html">Контакты</a></li>
+          </ul>
+
+          <a class="mobile-phone flex lg:hidden" href="tel:+998935054505">
+            +998 93 505 45 05
+          </a>
+        </div>
+      </div>
+
+      <!-- Overlay -->
+      <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+      <!-- 1-section -->
+      <section class="pt-[85px] lg:pt-[115px]">
+        <div
+          class="relative"
+          style="background: url('./img/holderBg.jpg') center / cover no-repeat"
+        >
+          <div class="absolute opacity-60 inset-0 z-0 bg-[#022D52]"></div>
+          <div class="container">
+            <div
+              class="text-white flex flex-col items-center justify-center relative h-[150px] sm:h-[180px] lg:h-[228px]"
+            >
+              <h1
+                class="font-[700] text-[25px] md:text-[40px] text-white uppercase mb-[3px]"
+              >
+                Контакты
+              </h1>
+              <div class="flex flex-wrap items-center">
+                <a href="" class="font-[500] text-[16px] md:text-[18px]"
+                  >Главная</a
+                >
+                <p class="mx-1 md:mx-5 font-[700]">-</p>
+                <a href="" class="font-[500] text-[16px] md:text-[18px]"
+                  >Контакты</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2-section -->
+      <section
+        class="pt-[25px] sm:pt-[45px] lg:pt-[75px] pb-[30px] sm:pb-[55px] lg:pb-[94px]"
+      >
+        <div class="container">
+          <div
+            class="flex justify-between gap-[14px] sm:gap-[22px] lg:gap-[30px] flex-wrap lg:flex-nowrap justify-center"
+          >
+            <div
+              class="flex flex-col justify-center block max-w-[300px] sm:max-w-[350px] lg:max-w-[420px] w-full bg-[#F0F4F8] px-[20px] sm:px-[30px] lg:px-[40px] py-[20px] sm:py-[26px] lg:py-[34px] text-center"
+            >
+              <h5
+                class="mb-[10px] text-[16px] font-[500] uppercase leading-none text-[#004B8B]"
+              >
+                Телефон
+              </h5>
+              <p class="font-[600] text-[20px] text-[#474747]">
+                +99 893 505 45 05
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col justify-center block max-w-[300px] sm:max-w-[350px] lg:max-w-[420px] w-full bg-[#F0F4F8] px-[20px] sm:px-[30px] lg:px-[40px] py-[20px] sm:py-[26px] lg:py-[34px] text-center"
+            >
+              <h5
+                class="mb-[10px] text-[16px] font-[500] uppercase leading-none text-[#004B8B]"
+              >
+                Электронная почта
+              </h5>
+              <p class="font-[600] text-[20px] text-[#474747]">
+                megabest@info.com
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col justify-center block max-w-[300px] sm:max-w-[350px] lg:max-w-[420px] w-full bg-[#F0F4F8] px-[20px] sm:px-[30px] lg:px-[40px] py-[20px] sm:py-[26px] lg:py-[34px] text-center"
+            >
+              <h5
+                class="mb-[10px] text-[16px] font-[500] uppercase leading-none text-[#004B8B]"
+              >
+                Адрес
+              </h5>
+              <p class="font-[600] text-[20px] text-[#474747]">
+                Узбекистан, г. ТашкентУл. Темур Малик, дом 17а
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3-section -->
+      <section>
+        <div class="container">
+          <div>
+            <h2
+              class="text-[24px] sm:text-[30px] lg:text-[40px] font-[700] text-[#004B8B] mb-[4px] sm:mb-[8px] lg:mb-[14px] text-center uppercase"
+            >
+              Мы на карте
+            </h2>
+            <div
+              class="w-[60px] h-1 lg:h-[8px] bg-[#004B8B] mb-[15px] sm:mb-[35px] lg:mb-[50px] mx-auto"
+            ></div>
+          </div>
+        </div>
+        <div class="h-[300px] sm:h-[500px] lg:h-[700px]">
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d374.38834214495137!2d69.35275546871615!3d41.35003366750449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef52b68c4277b%3A0x704a52cfbe784a9!2zU09TIC0g0YDQsNC30YDQsNCx0L7RgtC60LAg0YHQsNC50YLQvtCyINCyINGC0LDRiNC60LXQvdGC0LUsINGB0L7Qt9C00LDQvdC40LUg0YHQsNC50YLQvtCyINCyINGC0LDRiNC60LXQvdGC0LUsIHNlbyDQsiDRgtCw0YjQutC10L3RgtC1LCDRgdC-0LfQtNCw0L3QuNC1INGB0LDQudGC0L7QsiDQsiDRgtCw0YjQutC10L3RgtC1!5e0!3m2!1sen!2s!4v1762167838276!5m2!1sen!2s"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- 6-section -->
+      <section
+        class="h-[390px] flex items-center"
+        style="background: url('./img/svyazBg.jpg') no-repeat center / cover"
+      >
+        <div class="container">
+          <div class="flex flex-col items-center justify-center">
+            <h2
+              class="text-[24px] sm:text-[30px] lg:text-[40px] font-[700] text-[#004B8B] mb-[4px] sm:mb-[8px] lg:mb-[14px] text-center uppercase"
+            >
+              Свяжитесь с нами в Telegram
+            </h2>
+            <div
+              class="w-[60px] h-1 lg:h-[8px] bg-[#004B8B] mb-[12px] sm:mb-[18px] lg:mb-[28px] mx-auto"
+            ></div>
+            <!-- <div class="flex flex-col sm:flex-row gap-4 md:gap-6 max-w-[850px] w-full mx-auto">
+ 
+  <a 
+    href="/group" 
+    class="group flex-1 flex whitespace-nowrap  items-center justify-center px-6 md:px-10 py-4 md:py-5 bg-[#00447C] text-white font-semibold text-sm md:text-base uppercase hover:bg-[#003461] transition-colors"
+  >
+    <span>ПЕРЕЙТИ В ГРУППУ</span>
+    <svg class="w-5 h-5 ml-[9px] mr-auto transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+    </svg>
+  </a>
+
+
+  <a 
+    href="/admin" 
+    class="group flex-1 flex whitespace-nowrap items-center justify-between px-6 md:px-10 py-4 md:py-5 bg-[#00447C] text-white font-semibold text-sm md:text-base uppercase hover:bg-[#003461] transition-colors"
+  >
+    <span>СВЯЗАТЬСЯ С АДМИНИСТРАТОРОМ</span>
+    <svg class="w-5 h-5 ml-[9px] mr-auto  transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+    </svg>
+  </a>
+</div> -->
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-[840px] w-full mx-auto"
+            >
+              <!-- Button 1 -->
+              <a
+                href="/"
+                class="group flex whitespace-nowrap items-center justify-center px-6 md:px-[56px] py-4 md:py-[16px] bg-[#004B8B] text-white font-[600] text-[12px] md:text-[14px] uppercase hover:bg-[#003461] transition-colors"
+              >
+                <span class="flex items-center">
+                  ПЕРЕЙТИ В ГРУППУ
+                  <svg
+                    class="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+              </a>
+
+              <!-- Button 2 -->
+              <a
+                href="/"
+                class="group flex whitespace-nowrap items-center justify-center px-6 md:px-[56px] py-4 md:py-[16px] bg-[#004B8B] text-white font-[600] text-[12px] md:text-[14px] uppercase hover:bg-[#003461] transition-colors"
+              >
+                <span class="flex items-center">
+                  СВЯЗАТЬСЯ С АДМИНИСТРАТОРОМ
+                  <svg
+                    class="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer  -->
+      <footer
+        class="bg-[#003D5C] text-white pb-[26px] pt-[30px] md:pt-[63px] relative"
+      >
+        <div class="container">
+          <div>
+            <div
+              class="flex flex-col sm:flex-row text-center sm:text-start items-center sm:justify-between gap-8 mb-8"
+            >
+              <!-- Left - Navigation -->
+              <nav class="space-y-2 sm:space-y-3">
+                <a
+                  href="/about.html"
+                  class="block text-white opacity-60 hover:opacity-100 font-[500] text-[16px]"
+                  >О компании</a
+                >
+                <a
+                  href="/service.html"
+                  class="block text-white opacity-60 hover:opacity-100 font-[500] text-[16px]"
+                  >Услуги</a
+                >
+                <a
+                  href="/product.html"
+                  class="block text-white opacity-60 hover:opacity-100 font-[500] text-[16px]"
+                  >Продукция</a
+                >
+                <a
+                  href="/portfolio.html"
+                  class="block text-white opacity-60 hover:opacity-100 font-[500] text-[16px]"
+                  >Портфолио</a
+                >
+                <a
+                  href="/news.html"
+                  class="block text-white opacity-60 hover:opacity-100 font-[500] text-[16px]"
+                  >Новости</a
+                >
+                <a
+                  href="/contact.html"
+                  class="block text-white opacity-60 hover:opacity-100 font-[500] text-[16px]"
+                  >Контакты</a
+                >
+              </nav>
+
+              <!-- Center - Logo & Social -->
+              <div
+                class="flex flex-col items-center justify-center space-y-[30px]"
+              >
+                <a href="/" class="hover:opacity-80">
+                  <img
+                    src="./img/logoFooter.svg"
+                    alt="Logo"
+                    class="w-[200px]"
+                  />
+                </a>
+                <div class="flex gap-[20px] md:gap-[30px]">
+                  <a
+                    href="#"
+                    class="flex items-center justify-center hover:opacity-80"
+                  >
+                    <img
+                      src="/img/instagram.svg"
+                      alt="Instagram"
+                      class="w-[34px] h-[34px]"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center hover:opacity-80"
+                  >
+                    <img
+                      src="/img/facebook.svg"
+                      alt="Facebook"
+                      class="w-[34px] h-[34px]"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center hover:opacity-80"
+                  >
+                    <img
+                      src="/img/telegram.svg"
+                      alt="Telegram"
+                      class="w-[34px] h-[34px]"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right - Contact -->
+              <div class="space-y-4">
+                <div>
+                  <p class="text-white opacity-60 text-[12px] font-[500]">
+                    ТЕЛЕФОН
+                  </p>
+                  <a
+                    href="tel:+998935054505"
+                    class="text-white text-[16px] font-[500]"
+                    >+99 893 505 45 05</a
+                  >
+                </div>
+                <div>
+                  <p class="text-white opacity-60 text-[12px] font-[500]">
+                    ЭЛЕКТРОННАЯ ПОЧТА
+                  </p>
+                  <a
+                    href="mailto:megabest@info.com"
+                    class="text-white text-[16px] font-[500]"
+                    >megabest@info.com</a
+                  >
+                </div>
+                <div>
+                  <p class="text-white opacity-60 text-[12px] font-[500]">
+                    АДРЕС
+                  </p>
+                  <p class="text-white text-[16px] font-[500]">
+                    Узбекистан, г. Ташкент<br />
+                    Ул. Темур Малик, дом 17а
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Bottom -->
+            <div
+              class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400 relative"
+            >
+              <p class="opacity-100">«Mega Best Standart» Все права защищены</p>
+              <p>© Copyright 2025 - Web developed by SOS Group</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute w-full h-[1px] bg-white opacity-20 bottom-[100px] sm:bottom-[68px]"
+        ></div>
+      </footer>
+    </main>
+
+    <!-- fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- javascript -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
