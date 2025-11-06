@@ -21,7 +21,7 @@ body {
   color: #474747;
   padding-bottom: 8px;
   border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .navList > li > a:hover {
@@ -302,17 +302,20 @@ body {
 
 .linkHover:hover .linkHoverOpacity {
   opacity: 80%;
+  transition: all 0.5s ease;
 }
 
 .linkHover:hover .linkHoverInfo {
-  /* height: 50px; */
-  display: block;
+  height: 50px;
+  /* display: block; */
+  transition: all 0.5s ease;
 }
 
 @media (max-width: 768px) {
   .linkHover:hover .linkHoverInfo {
-    /* height: 30px; */
-    display: block;
+    height: 30px;
+    /* display: block; */
+    transition: all 0.5s ease;
   }
 }
 
@@ -485,12 +488,16 @@ body {
 }
 
 .linkHover2:hover .linkHoverInfo2 {
-  display: block;
+  /* display: block; */
+  transition: all 0.5s ease;
+  height: 50px;
 }
 
 @media (max-width: 768px) {
   .linkHover2:hover .linkHoverInfo2 {
-    display: block;
+    /* display: block; */
+    transition: all 0.5s ease;
+    height: 30px;
   }
 
   .linkHover2 .linkHoverOpacity2 {
@@ -503,3 +510,12 @@ body {
 color: #004B8B;
 
 }
+
+/* .homeLinkTrans > a:hover  .linkHoverOpacity{
+   transition: all 0.5s ease;
+}
+
+.homeLinkTrans > a:hover  .linkHover{
+   transition: all 0.5s ease;
+} */
+
