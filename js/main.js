@@ -207,3 +207,100 @@ const thumbs = new Swiper('.thumb-slider', {
       swiper: thumbs,
     },
   });
+
+
+// portfolio
+ 
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Elementlarni tanlab olamiz
+        const showMoreBtn = document.querySelector('.showPortfolio'); // Tugmani href="#" orqali tanladik
+        const cardContainer = document.getElementById('card-container');
+        
+        // Dastlab yashirin bo'lgan barcha cardlar
+        const hiddenCards = cardContainer.querySelectorAll('.card-item.hidden');
+        
+        // Har safar nechta card ko'rsatilishi
+        const cardsToShowPerClick = 2; 
+        let currentHiddenIndex = 0; // Yashirin cardlar qatoridagi joriy indeks
+        
+        // Tugmani bog'lash
+        showMoreBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Sahifaning tepaga qaytishini oldini oladi (chunki href="#")
+
+            let cardsShown = 0;
+            
+            // cardsToShowPerClick miqdordagi cardlarni ko'rsatamiz
+            for (let i = 0; i < cardsToShowPerClick && currentHiddenIndex < hiddenCards.length; i++) {
+                // Carddan 'hidden' klassini o'chiramiz
+                hiddenCards[currentHiddenIndex].classList.remove('hidden');
+                
+                // Cardlarni birin-ketin chiqishi uchun qisqa animatsiya qo'shish (ixtiyoriy)
+                // hiddenCards[currentHiddenIndex].style.opacity = '0';
+                // setTimeout(() => {
+                //    hiddenCards[currentHiddenIndex].style.opacity = '1';
+                //    hiddenCards[currentHiddenIndex].style.transition = 'opacity 0.5s ease-in-out';
+                // }, 10);
+                
+                currentHiddenIndex++;
+                cardsShown++;
+            }
+
+            // Agar barcha yashirin cardlar ko'rsatilgan bo'lsa, tugmani yashiramiz
+            if (currentHiddenIndex >= hiddenCards.length) {
+                showMoreBtn.style.display = 'none';
+            }
+        });
+        
+        // Agar boshidanoq yashirin cardlar bo'lmasa, tugmani yashirib qo'yamiz (loyihaning kelajagi uchun)
+        if (hiddenCards.length === 0) {
+             showMoreBtn.style.display = 'none';
+        }
+    });
+
+    // news
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // 1. Elementlarni tanlab olamiz
+        const showMoreBtn = document.querySelector('.showNews'); // Tugmani href="#" orqali tanladik
+        const cardContainer = document.getElementById('news-container');
+        
+        // Dastlab yashirin bo'lgan barcha cardlar
+        const hiddenCards = cardContainer.querySelectorAll('.news-item.hidden');
+        
+        // Har safar nechta card ko'rsatilishi
+        const cardsToShowPerClick = 3; 
+        let currentHiddenIndex = 0; // Yashirin cardlar qatoridagi joriy indeks
+        
+        // Tugmani bog'lash
+        showMoreBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Sahifaning tepaga qaytishini oldini oladi (chunki href="#")
+
+            let cardsShown = 0;
+            
+            // cardsToShowPerClick miqdordagi cardlarni ko'rsatamiz
+            for (let i = 0; i < cardsToShowPerClick && currentHiddenIndex < hiddenCards.length; i++) {
+                // Carddan 'hidden' klassini o'chiramiz
+                hiddenCards[currentHiddenIndex].classList.remove('hidden');
+                
+                // Cardlarni birin-ketin chiqishi uchun qisqa animatsiya qo'shish (ixtiyoriy)
+                // hiddenCards[currentHiddenIndex].style.opacity = '0';
+                // setTimeout(() => {
+                //    hiddenCards[currentHiddenIndex].style.opacity = '1';
+                //    hiddenCards[currentHiddenIndex].style.transition = 'opacity 0.5s ease-in-out';
+                // }, 10);
+                
+                currentHiddenIndex++;
+                cardsShown++;
+            }
+
+            // Agar barcha yashirin cardlar ko'rsatilgan bo'lsa, tugmani yashiramiz
+            if (currentHiddenIndex >= hiddenCards.length) {
+                showMoreBtn.style.display = 'none';
+            }
+        });
+        
+        // Agar boshidanoq yashirin cardlar bo'lmasa, tugmani yashirib qo'yamiz (loyihaning kelajagi uchun)
+        if (hiddenCards.length === 0) {
+             showMoreBtn.style.display = 'none';
+        }
+    });
