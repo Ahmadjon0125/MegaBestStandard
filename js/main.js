@@ -1,22 +1,40 @@
+// const header = document.getElementById("mainHeader");
+
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > 0) {
+//     header.classList.add(
+//       "shadow-lg",
+//       "bg-white",
+
+//       "bg-transparent"
+//     );
+//   } else {
+//     header.classList.remove(
+//       "shadow-lg",
+//       "bg-white",
+
+//       "bg-transparent"
+//     );
+//   }
+// });
+
+
 const header = document.getElementById("mainHeader");
 
-window.addEventListener("scroll", () => {
+function updateHeader() {
   if (window.scrollY > 0) {
-    header.classList.add(
-      "shadow-lg",
-      "bg-white",
-
-      "bg-transparent"
-    );
+    header.classList.add("shadow-lg", "bg-white", "bg-transparent");
   } else {
-    header.classList.remove(
-      "shadow-lg",
-      "bg-white",
-
-      "bg-transparent"
-    );
+    header.classList.remove("shadow-lg", "bg-white", "bg-transparent");
   }
-});
+}
+
+// Sahifa scroll bo‘lganda ishlaydi
+window.addEventListener("scroll", updateHeader);
+
+// Sahifa to‘liq yuklanganda ham tekshiramiz
+window.addEventListener("load", updateHeader);
+
 
 const langBtn = document.getElementById("langBtn");
 const langMenu = document.getElementById("langMenu");
@@ -277,8 +295,8 @@ const thumbs = new Swiper('.thumb-slider', {
 
     document.addEventListener('DOMContentLoaded', () => {
         // --- Sozlamalar ---
-        const initialCardsToShow = 6; // Dastlab nechta card ko'rinib tursin
-        const cardsPerClick = 3;       // Har bosilganda nechta card qo'shilsin
+        const initialCardsToShow = 9; // Dastlab nechta card ko'rinib tursin
+        const cardsPerClick = 6;       // Har bosilganda nechta card qo'shilsin
         // -------------------
 
         const showMoreBtn = document.getElementById('showMoreBtn');
@@ -288,7 +306,7 @@ const thumbs = new Swiper('.thumb-slider', {
         // 1. Dastlabki Holatni Sozlash (Init Function)
         function initializeCards() {
             // Agar umuman card bo'lmasa, funksiyadan chiqamiz
-            if (allCards.length === 0) {
+            if (allCards.length <= initialCardsToShow) {
                 showMoreBtn.style.display = 'none';
                 return;
             }
@@ -340,40 +358,11 @@ const thumbs = new Swiper('.thumb-slider', {
 // Poster muammosi
 
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const videoLink = document.getElementById('youtube-link');
-        const videoPosterImg = document.getElementById('video-poster-img');
+ document.addEventListener('DOMContentLoaded', () => {
+    const videoLink = document.getElementById('youtube-link');
+    const videoPosterImg = document.getElementById('video-poster-img');
 
-        if (!videoLink || !videoPosterImg) {
-            return; // Agar elementlar topilmasa, to'xtatish
-        }
+    if (!videoLink || !videoPosterImg) return;
 
-        // YouTube linkidan video ID sini ajratib oladigan funksiya
-        function extractYouTubeId(url) {
-            let videoId = null;
-            // Oddiy linklar uchun (v=ID)
-            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-            const match = url.match(regExp);
-            
-            if (match && match[2].length === 11) {
-                videoId = match[2];
-            }
-            return videoId;
-        }
+});
 
-        // Asosiy jarayon
-        const videoUrl = videoLink.href;
-        const videoId = extractYouTubeId(videoUrl);
-
-        if (videoId) {
-            // YouTube posterining yuqori sifatli (hqdefault) URL manzilini shakllantirish
-            const posterUrl = `http://i3.ytimg.com/vi/${videoId}/hqdefault.jpg`;
-            
-            // Img elementiga manzilni avtomatik kiritish
-            videoPosterImg.src = posterUrl;
-        } else {
-            console.error("YouTube video ID topilmadi. Link formatini tekshiring.");
-            // Agar poster topilmasa, zaxira rasm qo'yish (ixtiyoriy)
-            // videoPosterImg.src = "./img/default-poster.jpg";
-        }
-    });

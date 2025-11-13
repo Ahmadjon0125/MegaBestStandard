@@ -92,7 +92,7 @@ body {
 }
 
 .burger.active span:nth-child(1) {
-  transform: rotate(41deg) translateY(12px);
+  transform: rotate(45deg) translateY(12px);
 }
 
 .burger.active span:nth-child(2) {
@@ -100,7 +100,7 @@ body {
 }
 
 .burger.active span:nth-child(3) {
-  transform: rotate(-41deg) translateY(-11px);
+  transform: rotate(-45deg) translateY(-11px);
 }
 
 /* Desktop Navigation */
@@ -204,7 +204,7 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #444;
+  background: #F0F4F8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,9 +212,9 @@ body {
 
 .swiper-slide img {
   display: block;
-  width: 100%;
+  width: 140px;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .swiper-button-next,
@@ -511,11 +511,35 @@ color: #004B8B;
 
 }
 
-/* .homeLinkTrans > a:hover  .linkHoverOpacity{
-   transition: all 0.5s ease;
+
+
+
+
+
+/* Boshlang'ich holat: */
+.icon-wrapper .bg-shape {
+    fill: #ffffff; /* Oq rang, agar o'zgartirish kerak bo'lmasa */
+    opacity: 0.2;
+    transition: fill 0.3s, opacity 0.3s; /* Silliq o'tish */
 }
 
-.homeLinkTrans > a:hover  .linkHover{
-   transition: all 0.5s ease;
-} */
+.icon-wrapper .main-path {
+    fill: #ffffff; /* Asosiy ikonka rangi (Oq) */
+    transition: fill 0.3s; /* Silliq o'tish */
+}
+
+/* ------------------------------------------- */
+/* HOVER holati: Ranglarni o'zgartirish */
+/* ------------------------------------------- */
+
+/* 1. Asosiy shaklning (romb) rangi o'zgarsin */
+.icon-wrapper:hover .bg-shape {
+    fill: white; /* Yangi orqa fon rangi (Masalan, ko'k) */
+    opacity: 1; /* Shaffoflikni oshirish */
+}
+
+/* 2. Ikonkaning asosiy chiziqlari rangi o'zgarsin */
+.icon-wrapper:hover .main-path {
+    fill: #00325C; /* Yangi ikonka rangi (Masalan, To'q kulrang) */
+}
 
