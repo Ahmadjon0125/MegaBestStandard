@@ -262,8 +262,8 @@
 
             <div class="text-center mt-[25px] md:mt-[51px]">
               <a
-                href="#"
-                class="group inline-flex self-start justify-center items-center text-[14px] px-[10px] sm:px-[20px] lg:px-[33px] py-[8px] sm:py-[12px] lg:py-[21px] bg-[#004B8B] hover:bg-[#003C6F] text-white font-[600] transition duration-300"
+                
+                class="openModal group inline-flex self-start justify-center items-center text-[14px] px-[10px] sm:px-[20px] lg:px-[33px] py-[8px] sm:py-[12px] lg:py-[21px] bg-[#004B8B] hover:bg-[#003C6F] text-white font-[600] transition duration-300"
               >
                 Оставить заявку
                 <img
@@ -503,6 +503,27 @@
         ></div>
       </footer>
     </main>
+
+
+       <!-- Modal fon -->
+    <!-- Modal (bitta) -->
+    <div class="modalOverlay" id="modalOverlay">
+      <div class="modalBox">
+        <h2
+          class="text-center lg:text-start text-[#004B8B] font-[700] text-[25px] sm:text-[35px] lg:text-[50px] mb-[15px] sm:mb-[30px] lg:mb-[42px] leading-none"
+        >
+          Make a request</span>
+        </h2>
+
+        <form class="modalForm">
+          <input type="text" placeholder="Phone number" />
+          <input type="email" placeholder="Email" />
+          <textarea placeholder="Comment"></textarea>
+
+          <button type="submit" class="sendBtn">Send</button>
+        </form>
+      </div>
+    </div>
 
     <!-- fancybox -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
